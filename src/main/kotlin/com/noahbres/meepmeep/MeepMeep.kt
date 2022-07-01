@@ -36,7 +36,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
         lateinit var FONT_CMU_BOLD: Font
     }
 
-    val windowFrame = WindowFrame("Meep Meep", windowSize)
+    val windowFrame = WindowFrame("Meep Meep", windowSize, windowSize)
     val canvas = windowFrame.canvas
 
     val colorManager = ColorManager()
@@ -309,9 +309,13 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
                 colorManager.isDarkMode = true
                 ImageIO.read(classLoader.getResourceAsStream("background/season-2021-freightfrenzy/field-2021-adi-dark.png"))
             }
-            Background.FIELD_FREIGHTFRENZY_CRI_DARK -> {
+            Background.FIELD_FREIGHTFRENZY_CRI_SHARED_DARK -> {
                 colorManager.isDarkMode = true
-                ImageIO.read(classLoader.getResourceAsStream("background/season-2021-freightfrenzy/field-2021-cri-dark.png"))
+                ImageIO.read(classLoader.getResourceAsStream("background/season-2021-freightfrenzy/field-2021-cri-shared-dark.png"))
+            }
+            Background.FIELD_FREIGHTFRENZY_CRI_COOP_DARK -> {
+                colorManager.isDarkMode = true
+                ImageIO.read(classLoader.getResourceAsStream("background/season-2021-freightfrenzy/field-2021-cri-coop-dark.png"))
             }
 
         }.getScaledInstance(windowSize, windowSize, Image.SCALE_SMOOTH)
@@ -447,6 +451,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
         FIELD_ULTIMATEGOAL_INNOV8RZ_DARK,
         FIELD_FREIGHTFRENZY_OFFICIAL,
         FIELD_FREIGHTFRENZY_ADI_DARK,
-        FIELD_FREIGHTFRENZY_CRI_DARK
+        FIELD_FREIGHTFRENZY_CRI_COOP_DARK,
+        FIELD_FREIGHTFRENZY_CRI_SHARED_DARK
     }
 }
