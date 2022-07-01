@@ -1,5 +1,5 @@
 # MeepMeep
-[![Release](https://jitpack.io/v/NoahBres/MeepMeep.svg)](https://jitpack.io/#NoahBres/MeepMeep)
+[![Release](https://jitpack.io/v/IanHornblower/MeepMeep.svg)](https://jitpack.io/#IanHornblower/MeepMeep)
 
 Path creation/visualization tool for Road Runner
 
